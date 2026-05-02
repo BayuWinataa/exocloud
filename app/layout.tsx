@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono, Poppins } from 'next/font/google';
+import { Geist, Geist_Mono, Poppins, Inter } from 'next/font/google';
 import './globals.css';
 
 const geistSans = Geist({
@@ -18,6 +18,11 @@ const poppins = Poppins({
 	weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
 });
 
+const inter = Inter({
+  variable: '--font-inter',
+  subsets: ['latin'],
+});
+
 export const metadata: Metadata = {
 	title: 'Exocloud Indonesia',
 	description: 'Exocloud adalah platform pengembangan anak muda yang menyediakan program beasiswa, peluang internasional, volunteer, kompetisi, dan pengembangan diri untuk menciptakan dampak global.',
@@ -29,7 +34,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${poppins.variable} ${geistSans.variable} ${geistMono.variable}  h-full antialiased`}>
+		<html lang="en" className={`${inter.variable} ${poppins.variable} ${geistSans.variable} ${geistMono.variable}  h-full antialiased`}>
 			<body className="min-h-full flex flex-col">{children}</body>
 		</html>
 	);
