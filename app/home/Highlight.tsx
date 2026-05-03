@@ -4,9 +4,9 @@ import { HiArrowCircleRight } from "react-icons/hi";
 import CategoryFilter, { type HighlightCard } from "./CategoryFilter";
 
 const stats = [
-  { label: "Programs", val: "20+", icon: <HiGlobeAlt />, color: "text-[#0881A3]", bg: "bg-[#E8F5EF]" },
-  { label: "Participant", val: "300+", icon: <HiUsers />, color: "text-[#F59E0B]", bg: "bg-[#FEF7E8]" },
-  { label: "Nationalities", val: "20+", icon: <HiPaperAirplane />, color: "text-[#15B1E8]", bg: "bg-[#E7F0FC]" },
+  { label: "Programs", val: "10+", icon: <HiGlobeAlt />, color: "text-[#0881A3]", bg: "bg-[#E8F5EF]" },
+  { label: "Participants", val: "300+", icon: <HiUsers />, color: "text-[#F59E0B]", bg: "bg-[#FEF7E8]" },
+  { label: "Countries", val: "20+", icon: <HiPaperAirplane />, color: "text-[#15B1E8]", bg: "bg-[#E7F0FC]" },
 ];
 
 
@@ -18,20 +18,20 @@ const highlights: HighlightCard[] = [
     year: "2025",
     location: "Belgia, Paris",
     img: "/images/iees-2025.png",
-    category: "International Competition",
+    category: "Study Abroad Scholarship",
     size: "large",
     accentColor: "from-[#E7F0FC]", 
     btnColor: "#10316B",
-    badgeColor: "#03AED2"
+    badgeColor: "#10316B"
   },
   {
     id: 2,
-    title: "Global Volunteer",
-    subtitle: "Social impact project for local communities.",
+    title: "Exoreach International Scholarship",
+    subtitle: "Program beasiswa internasional untuk pengembangan kepemimpinan global.",
     year: "2025",
     location: "Bangkok, Thailand",
-    img: "/images/event-2.jpg",
-    category: "Social Program",
+    img: "/images/exoreach-img.webp",
+    category: "Travel Scholarship",
     size: "small",
     accentColor: "from-[#FEF7E8]", 
     btnColor: "#F59E0B",
@@ -39,12 +39,12 @@ const highlights: HighlightCard[] = [
   },
   {
     id: 3,
-    title: "Tech Innovators",
-    subtitle: "Competition for future technology leaders.",
-    year: "2024",
-    location: "Singapore",
-    img: "/images/event-1.jpg",
-    category: "International Competition",
+    title: "Global Youth Scholars Program",
+    subtitle: "Orientasi Surabaya dan Sidoarjo GYSP 2025.",
+    year: "2025",
+    location: "Surabaya, Sidoarjo",
+    img: "/images/gysp-img.webp",
+    category: "Study Abroad Scholarship",
     size: "small",
     accentColor: "from-[#E8F5EF]",
     btnColor: "#0881A3",
@@ -52,16 +52,16 @@ const highlights: HighlightCard[] = [
   },
   {
     id: 4,
-    title: "Study in Europe",
-    subtitle: "Scholarship mentoring for prestigious universities.",
-    year: "2025",
-    location: "Berlin, Germany",
-    img: "/images/iees-2025.png",
-    category: "Study Abroad Scholarship",
+    title: "International Future Innovators Challenge",
+    subtitle: "Mencetak Inovator Muda: Exocloud Indonesia Gelar International Future Innovators Challenge (IFIC).",
+    year: "2026",
+    location: "Singapore, Malaysia",
+    img: "/images/ific-img.webp",
+    category: "International Competition",
     size: "large",
     accentColor: "from-[#E7F0FC]",
     btnColor: "#10316B",
-    badgeColor: "#03AED2",
+    badgeColor: "#10316B",
   },
 ];
 

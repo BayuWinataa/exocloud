@@ -40,7 +40,7 @@ function HighlightCardItem({ item }: { item: HighlightCard }) {
     <div
       className={[
         "relative group overflow-hidden rounded-[2rem] shadow-sm border border-gray-100 bg-white",
-        item.size === "large" ? "col-span-2 h-[300px]" : "col-span-1 h-[300px]",
+        item.size === "large" ? "col-span-2 h-[240px]" : "col-span-1 h-[240px]",
       ].join(" ")}
     >
       <img
@@ -49,9 +49,9 @@ function HighlightCardItem({ item }: { item: HighlightCard }) {
         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
       />
       
-      <div className={`absolute inset-0 bg-gradient-to-r ${item.accentColor} via-white/80 to-transparent`} />
+      <div className={`absolute inset-0 bg-gradient-to-r ${item.accentColor} from-[0%] via-white/90 via-[30%] to-transparent to-[70%]`} />
       
-      <div className="absolute inset-0 p-8 flex flex-col justify-between z-10">
+      <div className="absolute inset-0 p-8 pt-6 pb-6 flex flex-col justify-between z-10">
         <div className="flex gap-2">
 
          <div 
@@ -81,9 +81,8 @@ function HighlightCardItem({ item }: { item: HighlightCard }) {
         </div>
         </div>
 
-        {/* Bottom Text Area */}
         <div className="space-y-2">
-          <h3 className="text-3xl font-black text-[#283646] tracking-tight">
+          <h3 className="text-2xl font-black text-[#283646] tracking-tight">
             {item.title}
           </h3>
           <p className="text-[13px] text-[#283646]/80 font-medium leading-snug max-w-sm">
@@ -92,10 +91,10 @@ function HighlightCardItem({ item }: { item: HighlightCard }) {
 
           <div className="w-[40%] border-b border-[#10316B]/40 pt-2" />
           
-          <div className="pt-4">
+          <div className="pt-2">
             <button 
               style={{ backgroundColor: item.btnColor }}
-              className="text-white text-xs font-bold px-5 py-2 rounded-xl flex items-center gap-2 transition-all shadow-md active:scale-95 group/btn hover:brightness-110"
+              className="text-white text-xs font-bold px-4 py-2 rounded-xl flex items-center gap-2 transition-all shadow-md active:scale-95 group/btn hover:brightness-110"
             >
               View more 
               <HiArrowCircleRight className="text-lg transition-transform group-hover/btn:translate-x-1" />

@@ -1,29 +1,33 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { HiArrowCircleRight } from "react-icons/hi";
-import { HiCurrencyDollar, HiUsers, HiBriefcase } from "react-icons/hi2";
+import { HiOutlineGlobeAlt, HiOutlineUserGroup, HiOutlineBriefcase } from "react-icons/hi2";
 
 const features = [
   {
-    title: "Financial Support",
-    desc: "Grants and funding to help you grow.",
-    icon: HiCurrencyDollar,
+    title: "International Access",
+    desc: "Gateway to global education and experiences.",
+    icon: HiOutlineGlobeAlt,
   },
   {
-    title: "Mentorship",
-    desc: "Guidance from experts every step.",
-    icon: HiUsers,
+    title: "Expert Mentorship",
+    desc: "Guidance to master leadership and business.",
+    icon: HiOutlineUserGroup,
   },
   {
-    title: "Career Opportunity",
-    desc: "Connect to opportunities of the future.",
-    icon: HiBriefcase,
+    title: "Global Networking",
+    desc: "Connect with world-class partners and institutions.",
+    icon: HiOutlineBriefcase,
   },
 ];
 
 export default function Hero() {
   return (
-    <section className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-10 pb-20">
+    <section className="relative overflow-hidden max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-10 pb-20">
+
+
+      <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-[#15B1E8]/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
         <div className="flex-1 space-y-5 max-w-lg">
           <h1 className="text-4xl md:text-5xl font-extrabold leading-[1.15] text-[#283646] tracking-tight">
