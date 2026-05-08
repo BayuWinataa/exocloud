@@ -11,14 +11,16 @@ const stats = [
 
 
 const highlights: HighlightCard[] = [
-  {
+
+// Beasiswa Perjalanan
+{
     id: 1,
     title: "IEES 2025",
     subtitle: "Internasional Enterpreunership Education Summit.",
     year: "2025",
     location: "Belgia, Paris",
     img: "/images/iees-2025.png",
-    category: "Study Abroad Scholarship",
+    category: "Travel Scholarship",
     size: "large",
     accentColor: "from-[#E7F0FC]", 
     btnColor: "#10316B",
@@ -26,19 +28,35 @@ const highlights: HighlightCard[] = [
   },
   {
     id: 2,
+    title: "International Youth Leaders Fellowship",
+    subtitle: "International Youth Leaders Fellowship",
+    year: "2026",
+    location: "Coming Soon",
+    img: "/images/iylf-img.png",
+    category: "Travel Scholarship",
+    size: "large",
+    accentColor: "from-[#FEF7E8]", 
+    btnColor: "#F59E0B",
+    badgeColor: "#F59E0B"
+  },
+  
+
+// Beasiswa Studi ke Luar Negeri
+{
+    id: 3,
     title: "Exoreach International Scholarship",
     subtitle: "Program beasiswa internasional untuk pengembangan kepemimpinan global.",
     year: "2025",
     location: "Bangkok, Thailand",
-    img: "/images/exoreach-img.webp",
-    category: "Travel Scholarship",
-    size: "small",
+    img: "/images/exoreach-img.png",
+    category: "Study Abroad Scholarship",
+    size: "large",
     accentColor: "from-[#FEF7E8]", 
     btnColor: "#F59E0B",
     badgeColor: "#F59E0B"
   },
   {
-    id: 3,
+    id: 4,
     title: "Global Youth Scholars Program",
     subtitle: "Orientasi Surabaya dan Sidoarjo GYSP 2025.",
     year: "2025",
@@ -46,19 +64,123 @@ const highlights: HighlightCard[] = [
     img: "/images/gysp-img.webp",
     category: "Study Abroad Scholarship",
     size: "small",
-    accentColor: "from-[#E8F5EF]",
+    accentColor: "from-[#E7F0FC]",
+    btnColor: "#10316B",
+    badgeColor: "#10316B"
+  },
+
+  {
+    id: 5,
+    title: "Exoreach Asia Scholarship",
+    subtitle: "Program beasiswa internasional untuk pengembangan kepemimpinan global.",
+    year: "Coming Soon",
+    location: "Coming Soon",
+    img: "/images/exoreach-asia-img.png",
+    category: "Study Abroad Scholarship",
+    size: "small",
+    accentColor: "from-[#E8F5EF]", 
     btnColor: "#0881A3",
     badgeColor: "#0881A3"
   },
+
+  // Kompetisi Internasional
+
   {
-    id: 4,
+    id: 6,
     title: "International Future Innovators Challenge",
     subtitle: "Mencetak Inovator Muda: Exocloud Indonesia Gelar International Future Innovators Challenge (IFIC).",
     year: "2026",
     location: "Singapore, Malaysia",
-    img: "/images/ific-img.webp",
+    img: "/images/ific-img.png",
     category: "International Competition",
     size: "large",
+    accentColor: "from-[#E7F0FC]",
+    btnColor: "#10316B",
+    badgeColor: "#10316B",
+  },
+   
+  
+//social
+  {
+    id: 7,
+    title: "Exocloud Sponsorship Program",
+    subtitle: "Exocloud Sponsorship Program",
+    year: "2026",
+    location: "Coming Soon",
+    img: "/images/exocloud-sponsorship-img.png",
+    category: "Social Program",
+    size: "large",
+    accentColor: "from-[#FEF7E8]",
+    btnColor: "#F59E0B",
+    badgeColor: "#F59E0B",
+  },
+
+  //self dev
+   {
+    id: 8,
+    title: "Exocloud Voluntary Program",
+    subtitle: "Exocloud Voluntary Program",
+    year: "2026",
+    location: "Indonesia",
+    img: "/images/exocloud-voluntary-img.png",
+    category: "Personal Development",
+    size: "small",
+    accentColor: "from-[#E7F0FC]",
+    btnColor: "#10316B",
+    badgeColor: "#10316B",
+  },
+
+   {
+    id: 9,
+    title: "Exobiz Incubator",
+    subtitle: "Exobiz Incubator",
+    year: "2026",
+    location: "Coming Soon",
+    img: "/images/exobiz-incubator-img.png",
+    category: "Personal Development",
+    size: "small",
+    accentColor: "from-[#E8F5EF]",
+    btnColor: "#0881A3",
+    badgeColor: "#0881A3",
+  },
+
+   {
+    id: 10,
+    title: "English Class 5.0",
+    subtitle: "English Class 5.0",
+    year: "2026",
+    location: "Coming Soon",
+    img: "/images/english-class-img.png",
+    category: "Personal Development",
+    size: "large",
+    accentColor: "from-[#FEF7E8]",
+    btnColor: "#F59E0B",
+    badgeColor: "#F59E0B",
+  },
+
+   {
+    id: 11,
+    title: "Podcast XYZ",
+    subtitle: "Podcast XYZ",
+    year: "2026",
+    location: "Coming Soon",
+    img: "/images/podcast-xyz-img.png",
+    category: "Personal Development",
+    size: "small",
+    accentColor: "from-[#E8F5EF]",
+    btnColor: "#0881A3",
+    badgeColor: "#0881A3",
+  },
+
+   {
+    id: 12,
+    title: "Kongres Pemuda Indonesia",
+    subtitle: "Kongres Pemuda Indonesia",
+    year: "2026",
+    location: "Coming Soon",
+    img: "/images/kongres-pemuda-img.png",
+    category: "Personal Development",
+    size: "small",
     accentColor: "from-[#E7F0FC]",
     btnColor: "#10316B",
     badgeColor: "#10316B",

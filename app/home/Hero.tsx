@@ -1,31 +1,10 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { HiArrowCircleRight } from "react-icons/hi";
-import { HiOutlineGlobeAlt, HiOutlineUserGroup, HiOutlineBriefcase } from "react-icons/hi2";
-
-const features = [
-  {
-    title: "International Access",
-    desc: "Gateway to global education and experiences.",
-    icon: HiOutlineGlobeAlt,
-  },
-  {
-    title: "Expert Mentorship",
-    desc: "Guidance to master leadership and business.",
-    icon: HiOutlineUserGroup,
-  },
-  {
-    title: "Global Networking",
-    desc: "Connect with world-class partners and institutions.",
-    icon: HiOutlineBriefcase,
-  },
-];
 
 export default function Hero() {
   return (
     <section className="relative overflow-hidden max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-10 pb-20">
-
-
       <div className="absolute top-1/2 -right-20 w-[400px] h-[400px] bg-[#15B1E8]/10 rounded-full blur-[100px] -z-10 pointer-events-none" />
       
       <div className="flex flex-col md:flex-row items-center justify-between gap-8 mb-12">
@@ -64,34 +43,6 @@ export default function Hero() {
     </div>
       </div>
 
-      <div className="max-w-3xl mx-auto">
-        <div className="bg-[#EEF8FD] rounded-2xl px-6 py-4 flex flex-wrap md:flex-nowrap justify-between items-center gap-4">
-          {features.map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={idx}
-                className="flex items-center gap-3 flex-1 min-w-[180px]"
-              >
-                <div className="bg-white rounded-xl p-2.5 shrink-0 shadow-sm">
-                  <Icon className="text-[#15B1E8] text-2xl" />
-                </div>
-                <div>
-                  <p className="font-bold text-[#10316B] text-sm leading-tight">
-                    {item.title}
-                  </p>
-                  <p className="text-[#283646]/50 text-[11px] mt-0.5 leading-snug">
-                    {item.desc}
-                  </p>
-                </div>
-                {idx < 2 && (
-                  <div className="hidden md:block w-px h-8 bg-[#15B1E8]/20 ml-auto shrink-0" />
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </div>
     </section>
   );
 }

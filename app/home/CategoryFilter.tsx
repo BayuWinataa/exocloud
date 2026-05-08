@@ -39,17 +39,21 @@ function HighlightCardItem({ item }: { item: HighlightCard }) {
   return (
     <div
       className={[
-        "relative group overflow-hidden rounded-[2rem] shadow-sm border border-gray-100 bg-white",
+        "relative group overflow-hidden rounded-[2rem] shadow-sm border border-gray-100",
         item.size === "large" ? "col-span-2 h-[240px]" : "col-span-1 h-[240px]",
       ].join(" ")}
+
+      style={{ backgroundColor: `${item.badgeColor}08` }}
     >
-      <img
-        src={item.img}
-        alt={item.title}
-        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-      />
+      {item.img && (
+        <img
+          src={item.img}
+          alt={item.title}
+          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+        />
+      )}
       
-      <div className={`absolute inset-0 bg-gradient-to-r ${item.accentColor} from-[0%] via-white/90 via-[30%] to-transparent to-[70%]`} />
+      <div className={`absolute inset-0 bg-gradient-to-r ${item.accentColor} from-[0%] via-white/95 via-[35%] to-transparent to-[75%]`} />
       
       <div className="absolute inset-0 p-8 pt-6 pb-6 flex flex-col justify-between z-10">
         <div className="flex gap-2">
@@ -110,7 +114,10 @@ export default function CategoryFilter({ highlights }: { highlights: HighlightCa
   const [active, setActive] = useState<ActiveCategory>("All");
 
   const filtered =
-    active === "All" ? highlights : highlights.filter((h) => h.category === active);
+  active === "All" ? highlights : highlights.filter((h) => h.category === active);
+
+  const displayedHighlights =
+    active === "All" ? filtered.slice(0, 3) : filtered;
 
   return (
     <>
@@ -149,7 +156,7 @@ export default function CategoryFilter({ highlights }: { highlights: HighlightCa
       {/* Cards Grid */}
       {filtered.length > 0 ? (
         <div className="grid grid-cols-2 gap-8">
-          {filtered.map((item) => (
+          {displayedHighlights.map((item) => (
             <HighlightCardItem key={item.id} item={item} />
           ))}
         </div>
