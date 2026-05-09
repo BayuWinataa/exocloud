@@ -1,5 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import { HiArrowCircleRight } from "react-icons/hi";
 
 export default function Hero() {
@@ -31,11 +32,14 @@ export default function Hero() {
         </div>
 
     <div className="flex-1 flex justify-center md:justify-end">
-      <div className="relative w-full max-w-[500px]">
-        <img
+      <div className="relative w-full max-w-[700px]">
+        <Image
           src="/images/hero-banner.png"
           alt="Exocloud Activities"
           className="w-full h-auto drop-shadow-2xl relative z-10"
+          width={500}
+          height={500}
+          priority
         />
 
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-[#15B1E8]/5 rounded-full blur-3xl -z-0 pointer-events-none" />

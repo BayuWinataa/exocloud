@@ -194,16 +194,19 @@ export default function Highlight() {
 			</div>
 
 			<div className="max-w-2xl mx-auto mb-12">
-				<div className="bg-white border border-gray-50 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl px-8 py-4 flex justify-around items-center">
-					{stats.map((stat, i) => (
-						<div key={i} className="flex items-center gap-3">
-							<div className={`${stat.bg} p-2.5 rounded-xl ${stat.color} text-xl`}>{stat.icon}</div>
-							<div>
-								<p className="text-base font-black text-[#283646] leading-none">{stat.val}</p>
-								<p className="text-gray-400 text-[10px] font-bold uppercase tracking-widest mt-1">{stat.label}</p>
+				<div className="bg-white border border-gray-50 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl px-3 py-3 sm:px-5 sm:py-4 md:px-8 md:py-4">
+					<div className="grid grid-cols-3 items-center gap-2 sm:gap-3 md:gap-4">
+						{stats.map((stat, i) => (
+							<div key={i} className="flex min-w-0 flex-col items-center gap-1 text-center sm:flex-row sm:items-center sm:text-left sm:gap-2 md:gap-3">
+								<div className={`${stat.bg} flex h-8 w-8 items-center justify-center rounded-lg ${stat.color} text-sm sm:h-9 sm:w-9 sm:rounded-xl sm:text-base md:h-10 md:w-10 md:text-xl`}>{stat.icon}</div>
+								<div className="min-w-0">
+									<p className="text-[11px] font-black leading-none text-[#283646] sm:text-sm md:text-base">{stat.val}</p>
+									<p className="mt-0.5 text-[7px] font-bold uppercase tracking-[0.18em] text-gray-400 sm:text-[8px] md:text-[10px]">{stat.label}</p>
+								</div>
+                
 							</div>
-						</div>
-					))}
+						))}
+					</div>
 				</div>
 			</div>
 

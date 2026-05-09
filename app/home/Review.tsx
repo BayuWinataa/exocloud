@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { HiChatBubbleLeftRight } from "react-icons/hi2";
 
@@ -44,11 +45,13 @@ function Avatar({ src, name }: { src: string; name: string }) {
       {hasError ? (
         <span className="text-[#15B1E8] font-bold text-sm">{initials}</span>
       ) : (
-        <img
+        <Image
           src={src}
           alt={name}
           className="w-full h-full object-cover"
           onError={() => setHasError(true)}
+          width={50}
+          height={50}
         />
       )}
     </div>

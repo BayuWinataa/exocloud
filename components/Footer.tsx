@@ -46,7 +46,9 @@ export default function Footer() {
 				<div className="grid gap-10 md:grid-cols-3">
 					<div className="space-y-5">
 						<div className="inline-flex items-center rounded-2xl bg-white px-3 py-2 shadow-xl ">
-							<Image src="/logo-exocloud.webp" alt="Exocloud logo" width={160} height={48} className="h-auto w-36 object-contain" priority />
+							<span className="relative block h-12 w-40">
+								<Image src="/logo-exocloud.webp" alt="Exocloud logo" fill className="object-contain" priority sizes="160px" />
+							</span>
 						</div>
 						<p className="text-sm font-medium leading-relaxed text-secondary-foreground">
 							A non-governmental organization (NGO) under the auspices of the Dharma Bakti Wahyudin Foundation that empowers young people in the fields of education, social services, and social welfare.

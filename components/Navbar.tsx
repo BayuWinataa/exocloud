@@ -76,7 +76,9 @@ export default function Navbar() {
 					}`}
 				>
 					<Link href="/" aria-label="Exocloud Home" onClick={() => setIsOpen(false)} className="flex shrink-0 items-center">
-						<Image src="/logo-exocloud.webp" alt="Exocloud" width={160} height={45} className="h-auto w-31.25 object-contain sm:w-36.25 md:w-40" priority />
+						<span className="relative block h-[45px] w-[160px]">
+							<Image src="/logo-exocloud.webp" alt="Exocloud" fill className="object-contain" priority sizes="160px" />
+						</span>
 					</Link>
 
 					<div className="hidden items-center gap-8 md:flex">
@@ -158,7 +160,9 @@ export default function Navbar() {
 							className="fixed right-0 top-0 z-50 h-dvh w-[82%] bg-white p-6 shadow-[-2px_0px_0px_var(--secondary-foreground)] md:hidden"
 						>
 							<div className="mb-10 flex items-center justify-between">
-								<Image src="/logo-exocloud.webp" alt="Exocloud" width={145} height={42} className="h-auto w-33.75 object-contain" priority />
+								<span className="relative block h-[42px] w-[145px]">
+									<Image src="/logo-exocloud.webp" alt="Exocloud" fill className="object-contain" priority sizes="145px" />
+								</span>
 
 								<button type="button" aria-label="Close menu" onClick={() => setIsOpen(false)} className="relative flex h-10 w-10 items-center justify-center rounded-full border-2 border-secondary-foreground bg-primary">
 									<motion.span initial={{ rotate: 0 }} animate={{ rotate: 45 }} className="absolute h-0.5 w-5 rounded-full bg-secondary-foreground" />
