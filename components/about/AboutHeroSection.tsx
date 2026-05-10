@@ -52,9 +52,9 @@ export default function AboutHeroSection() {
 					</div>
 				</div>
 
-				<div className="relative">
-					<div className="absolute left-1/2 top-1/2 -z-10 h-105 w-105 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-2xl" />
-					<div className="absolute -right-6 top-8 -z-10 h-28 w-28 rounded-full bg-secondary/50 blur-xl" />
+				<div className="relative overflow-hidden">
+					<div className="absolute left-1/2 top-1/2 -z-10 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/10 blur-2xl sm:h-80 sm:w-80 lg:h-105 lg:w-105" />
+					<div className="absolute -right-6 top-8 -z-10 h-20 w-20 rounded-full bg-secondary/50 blur-xl sm:h-28 sm:w-28" />
 
 					<div className="grid grid-cols-2 gap-4 md:gap-5">
 						{aboutImages.map((image) => (
