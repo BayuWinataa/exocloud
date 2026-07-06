@@ -1,4 +1,18 @@
 import Link from 'next/link';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Hubungi Kami',
+	description: 'Hubungi Exocloud Indonesia untuk peluang kerja sama, program, volunteer, atau pertanyaan lainnya terkait pengembangan pemuda.',
+	openGraph: {
+		title: 'Hubungi Exocloud Indonesia',
+		description: 'Hubungi Exocloud Indonesia untuk peluang kerja sama, program, volunteer, atau pertanyaan lainnya terkait pengembangan pemuda.',
+		url: '/contact',
+	},
+	alternates: {
+		canonical: '/contact',
+	},
+};
 import { FaEnvelope, FaInstagram, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 

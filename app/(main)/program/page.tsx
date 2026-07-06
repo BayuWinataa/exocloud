@@ -1,3 +1,18 @@
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+	title: 'Program',
+	description: 'Jelajahi berbagai program Exocloud Indonesia mulai dari beasiswa, volunteer, hingga kompetisi internasional yang siap mengembangkan potensi Anda.',
+	openGraph: {
+		title: 'Program Exocloud Indonesia',
+		description: 'Jelajahi berbagai program Exocloud Indonesia mulai dari beasiswa, volunteer, hingga kompetisi internasional yang siap mengembangkan potensi Anda.',
+		url: '/program',
+	},
+	alternates: {
+		canonical: '/program',
+	},
+};
+
 export default function ProgramPage() {
 	return (
 		<div className="min-h-screen bg-[#fafaf8]">
