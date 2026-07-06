@@ -38,7 +38,7 @@ const officeDetails = [
 
 export default function ContactPage() {
 	return (
-		<main className="min-h-screen bg-[#fafaf8] pt-24">
+		<div className="min-h-screen bg-[#fafaf8]">
 			<section className="container mx-auto px-5 py-10 md:py-14 lg:py-16">
 				<div className="mx-auto max-w-5xl">
 					<div className="mt-6 max-w-3xl space-y-5">
@@ -136,6 +136,6 @@ export default function ContactPage() {
 					</div>
 				</div>
 			</section>
-		</main>
+		</div>
 	);
 }

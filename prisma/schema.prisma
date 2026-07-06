@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  password    String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  formResponses FormResponse[]
+
+  @@map("users")
+}
+
+model Form {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  description String   @db.Text
+  status      String   @default("draft")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  fields   FormField[]
+  responses FormResponse[]
+
+  @@map("forms")
+}
+
+model FormField {
+  id        Int      @id @default(autoincrement())
+  formId    Int
+  label     String
+  type      String
+  required  Boolean  @default(false)
+  options   String?  @db.Text
+  order     Int      @default(0)
+
+  form Form @relation(fields: [formId], references: [id], onDelete: Cascade)
+
+  @@map("form_fields")
+}
+
+model FormResponse {
+  id            Int      @id @default(autoincrement())
+  formId        Int
+  submittedById Int?
+  submittedBy   String?
+  createdAt     DateTime @default(now())
+  payload       Json
+
+  form Form @relation(fields: [formId], references: [id], onDelete: Cascade)
+  user User? @relation(fields: [submittedById], references: [id])
+
+  @@map("form_responses")
+}

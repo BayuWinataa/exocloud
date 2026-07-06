@@ -15,6 +15,7 @@ const navItems: NavItem[] = [
 	{ label: 'Home', href: '/' },
 	{ label: 'About', href: '/about' },
 	{ label: 'Program', href: '/program' },
+	{ label: 'Pendaftaran', href: '/pendaftaran' },
 	{ label: 'Contact', href: '/contact' },
 ];
 
