@@ -4,10 +4,10 @@ import Review from "./Review";
 
 export default function HomePage() {
 	return (
-		<main className="min-h-screen bg-white pt-24">
+		<div className="min-h-screen bg-white">
 			<Hero />
 			<Highlight />
 			<Review />
-		</main>
+		</div>
 	);
 }

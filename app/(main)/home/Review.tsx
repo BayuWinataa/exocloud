@@ -70,30 +70,30 @@ export default function Review() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {reviews.map((review) => (
-            <div
+            <figure
               key={review.id}
               className="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col gap-5"
             >
-              <div className="flex items-center gap-3">
+              <figcaption className="flex items-center gap-3">
                 <Avatar src={review.avatar} name={review.name} />
                 <div>
-                  <p className="font-bold text-[#283646] text-sm leading-tight">
+                  <div className="font-bold text-[#283646] text-sm leading-tight">
                     {review.name}
-                  </p>
-                  <p className="text-[#283646] text-xs font-medium mt-0.5">
+                  </div>
+                  <div className="text-[#283646] text-xs font-medium mt-0.5">
                     {review.role}
-                  </p>
+                  </div>
                 </div>
-              </div>
+              </figcaption>
 
               <div className="border-t border-gray-100" />
 
-              <p className="text-[#283646]/70 leading-relaxed text-sm italic flex-1">
-                &ldquo;{review.quote}&rdquo;
-              </p>
+              <blockquote className="text-[#283646]/70 leading-relaxed text-sm italic flex-1">
+                <p>&ldquo;{review.quote}&rdquo;</p>
+              </blockquote>
 
               <HiChatBubbleLeftRight className="text-[#15B1E8]/20 text-3xl self-end" />
-            </div>
+            </figure>
           ))}
         </div>
       </div>

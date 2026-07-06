@@ -195,18 +195,19 @@ export default function Highlight() {
 
 			<div className="max-w-2xl mx-auto mb-12">
 				<div className="bg-white border border-gray-50 shadow-[0_4px_20px_rgba(0,0,0,0.03)] rounded-2xl px-3 py-3 sm:px-5 sm:py-4 md:px-8 md:py-4">
-					<div className="grid grid-cols-3 items-center gap-2 sm:gap-3 md:gap-4">
+					<dl className="grid grid-cols-3 items-center gap-2 sm:gap-3 md:gap-4">
 						{stats.map((stat, i) => (
 							<div key={i} className="flex min-w-0 flex-col items-center gap-1 text-center sm:flex-row sm:items-center sm:text-left sm:gap-2 md:gap-3">
-								<div className={`${stat.bg} flex h-8 w-8 items-center justify-center rounded-lg ${stat.color} text-sm sm:h-9 sm:w-9 sm:rounded-xl sm:text-base md:h-10 md:w-10 md:text-xl`}>{stat.icon}</div>
+								<dt className={`${stat.bg} flex h-8 w-8 items-center justify-center rounded-lg ${stat.color} text-sm sm:h-9 sm:w-9 sm:rounded-xl sm:text-base md:h-10 md:w-10 md:text-xl`} aria-hidden="true">
+									{stat.icon}
+								</dt>
 								<div className="min-w-0">
-									<p className="text-[11px] font-black leading-none text-[#283646] sm:text-sm md:text-base">{stat.val}</p>
-									<p className="mt-0.5 text-[7px] font-bold uppercase tracking-[0.18em] text-gray-400 sm:text-[8px] md:text-[10px]">{stat.label}</p>
+									<dd className="text-[11px] font-black leading-none text-[#283646] sm:text-sm md:text-base">{stat.val}</dd>
+									<dt className="mt-0.5 text-[7px] font-bold uppercase tracking-[0.18em] text-gray-400 sm:text-[8px] md:text-[10px]">{stat.label}</dt>
 								</div>
-                
 							</div>
 						))}
-					</div>
+					</dl>
 				</div>
 			</div>
 
