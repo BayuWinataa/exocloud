@@ -188,12 +188,12 @@ export default function FormBuilder({ initialData }: FormBuilderProps) {
         </div>
 
         {error && (
-          <motion.initial animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 10 }}>
+          <motion.div animate={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 10 }}>
             <div className="bg-red-50 border border-red-200 text-red-600 rounded-2xl p-4 flex gap-3 text-sm">
               <AlertCircle className="w-5 h-5 shrink-0" />
               <p>{error}</p>
             </div>
-          </motion.initial>
+          </motion.div>
         )}
 
         <button
